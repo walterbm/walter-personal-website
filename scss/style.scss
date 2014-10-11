@@ -335,7 +335,7 @@ span{
 		}
 
 		.img-roll{
-			background: url(../img/projects/project-composite.jpg) 0 0 repeat-y;
+			background: url(../img/projects/project-composite.png) 0 0 repeat-y;
 			background-size: 100%;
 			padding-bottom: 54.6%;
 			filter: grayscale(100%);
@@ -370,17 +370,17 @@ footer{
 
 	display: none;
 
-	a{
+	a svg{
 		display: block;
 		margin: 0 auto;
-		color: $white;
+		fill: $white;
 		text-decoration: none;
-		font-size: 2rem;
-		width: 2rem;
-		transition: all 0.2s ease;
+		width: 3rem;
+		height: 3rem;
+		transition: fill 0.5s ease;
 	}
-	a:hover{
-		color: white;
+	a svg:hover{
+		fill: white;
 	}
 }
 
