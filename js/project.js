@@ -10,7 +10,9 @@ function borderClear(){
 
 $(document).ready(function(){
 	//preparing title page load animations by adding animation class
-	$("#welcome h1").addClass("animated flipInX");
+	//flipInX does not work with new versions of Safari due to css transitions bug
+	//switched to fadeIn
+	$("#welcome h1").addClass("animated fadeIn");
 	$("#section-container").addClass("animated fadeInDown");
 
 	//hides accordion elements on load
@@ -75,7 +77,7 @@ $(window).load(function(){
 
 			//animates project content using a lareg composite image and background positioning
 			var computedPosition = ($(this).index()/($(this).length))*100;
-			$(".project-content .img-roll").css({"background-position-y":computedPosition.toString()+"%"});
+			$(".project-content .img-roll").css({"background-position":"0 "+computedPosition.toString()+"%"});
 
 			//show correponding project description based on link index
 			if($(".project-description p:eq("+$(this).index()+")").is(":visible") === false){
